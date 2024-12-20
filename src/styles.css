@@ -1,4 +1,112 @@
 /* styles.css */
 body {
-    background-color: rebeccapurple;
-  }
+  margin: 0; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  height: 100vh; 
+  background-image: url(https://mobilesolutions.pt/wp-content/uploads/2016/02/Silver-Blur-Background-Wallpaper.jpg); 
+  background-size: cover; /* Ensure the background image covers the screen */
+  background-position: center; 
+  font-family: Arial, sans-serif;
+}
+
+#outer-frame {
+  width: 400px; 
+  height: 600px; 
+  background-image: url(https://mobilesolutions.pt/wp-content/uploads/2016/02/Silver-Blur-Background-Wallpaper.jpg); 
+  border: 1px solid #ccc; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 30px; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+}
+
+#inner-frame {
+  text-align: center; 
+  width: 100%; 
+}
+
+label {
+  display: block; 
+  font-size: 18px; 
+  margin-bottom: 10px; 
+  color: #333; 
+}
+
+input {
+  width: 80%; 
+  padding: 10px; 
+  border: 1px solid #ccc;
+  border-radius: 100px;
+  font-size: 16px; 
+  outline: none; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  
+  
+}
+
+input:focus {
+  border-color: #007bff; 
+}
+
+button {
+  background-color: whitesmoke;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  margin-top: 10px;
+  width: 80px;
+  height: 30px;
+  font-family: Arial, sans-serif;
+  border:1px solid white;
+  border-radius: 20px;
+  color: #333;
+}
+
+.error-message {
+  color: #333;
+  font-size: 14px;
+  margin-top: 5px; 
+}
+
+.show-weather {
+  width: auto;
+  height: auto;
+  background-image: url(https://mobilesolutions.pt/wp-content/uploads/2016/02/Silver-Blur-Background-Wallpaper.jpg);
+  border: 1px solid #ddd;
+  border-radius: 30px;
+  padding: 20px;
+  margin-top: 60px; /* Add margin at the top for spacing */
+  box-shadow: 10px 20px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  color: #333;
+  font-size: 12px;
+}
+
+
+#forecast {
+  height: auto;
+  width: auto;
+  display: flex;
+  gap: 6px;
+}
+
+.forecast-day {
+  width: 25%; /* Three columns */
+  margin-bottom: 15px;
+  text-align: center;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  padding: 10px;
+  box-shadow: 4px 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+#weatherIcon {
+  width: 80px;
+  height: 80px;
+}
+
+#main-icon{
+  width: 100px;
+  height: 100px;
+}

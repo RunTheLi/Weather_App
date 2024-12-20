@@ -4,8 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    
+    <div id="outer-frame">
+        <div id="inner-frame">
+            <img id="main-icon" src="https://cdn-icons-png.flaticon.com/512/1555/1555512.png">
+            <label for="search-weather" >Weather Today</label>
+            <input
+            type="text"
+            id="search-text"
+            name="search-text"
+            placeholder="Please Enter your location"
+            required
+          />
+          <span class="error-message" id="search-error"></span>
+          <button type="submit" id="search-btn">Search</button>
+        </div>
+    </div>
+    <script src="index.js" defer></script>
 </body>
 </html>
