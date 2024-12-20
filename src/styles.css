@@ -1,4 +1,17 @@
 /* styles.css */
+
+@media only screen and (max-width: 720px) { 
+  .image-wrapper { 
+  grid-template-columns: 1fr; 
+  } 
+  } 
+  
+  @media (prefers-reduced-motion: no-preference) {
+    * {
+      scroll-behavior: smooth;
+    }
+  }
+
 body {
   margin: 0; 
   display: flex; 
@@ -9,6 +22,12 @@ body {
   background-size: cover; /* Ensure the background image covers the screen */
   background-position: center; 
   font-family: Arial, sans-serif;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out
+}
+
+body.fade-out {
+  opacity: 0;
 }
 
 #outer-frame {
@@ -75,7 +94,7 @@ button {
   border: 1px solid #ddd;
   border-radius: 30px;
   padding: 20px;
-  margin-top: 60px; /* Add margin at the top for spacing */
+  margin-top: 10px; /* Add margin at the top for spacing */
   box-shadow: 10px 20px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
   color: #333;

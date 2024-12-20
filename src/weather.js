@@ -38,11 +38,7 @@ export default function weather() {
       displayWeather(data, location);
     } catch (error) {
       console.error(error.message);
-      showError(
-        searchText,
-        searchError,
-        "Unable to fetch weather data. Please try again."
-      );
+      showError(searchText, searchError, "Unable to fetch weather data. Please try again.");
     }
   });
 
@@ -69,8 +65,7 @@ export default function weather() {
     const currentSummary = currentDay.conditions;
     const currentTemp = currentDay.temp;
     const feelsLike = currentDay.feelslike;
-    const description =
-      currentDay.description || "No detailed description available.";
+    const description = currentDay.description || "No detailed description available.";
 
     const forecast = data.days.slice(1, 8);
 
@@ -105,8 +100,12 @@ export default function weather() {
 
     const returnBtn = document.getElementById("return-btn");
     returnBtn.addEventListener("click", () => {
+
+    document.body.classList.add("fade-out");
       // Reload the page to restart
+      setTimeout(() => {
       window.location.reload();
+    }, 200);
     });
   }
 }
